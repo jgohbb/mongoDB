@@ -1,0 +1,62 @@
+<nav class="top-bar topbar-responsive">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+    <a class="topbar-responsive-logo" href="#"><strong>NPR News Scraper</strong></a>
+  </div>
+  <div id="topbar-responsive" class="topbar-responsive-links">
+    <div class="top-bar-left">
+      <ul class="menu simple vertical medium-horizontal">
+        <li><a href="/">Home</a></li>
+        <li><a href="/saved">Saved Articles</a></li>
+        <div class="button" id="delete">
+            <li><a href="/delete-articles">Delete All Save Articles</a></li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="title-container animated fadeIn">
+  <h1>SAVED ARTICLES</h1>
+</div>
+
+
+<div class="container-md" id="saved-article-container">
+    <div class="row">
+      {{#if articles}}
+        {{#each articles}}
+          {{#if saved}}
+            <div class="col-md-12">
+              <div class="card animated fadeIn" style="width: 300px;">
+                <div class="reveal" id="cardModal{{_id}}" data-reveal>
+                  <p><button class="button expanded" id="show-notes" data-id={{_id}}>Show Note</button></p>
+                  <input class="titleinput" type="text" value="" placeholder="Enter Title">
+                  <input class="bodyinput" type="text" value="" placeholder="Enter Note">
+                  <div class="button" value="submit" id="savenote" data-id="{{_id}}" 
+                      data-close>Submit</div>
+                  <div class="button float-right" value="delete" id="deletenote" data-id="{{_id}}" 
+                      data-close>Delete</div>
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class=" card-divider">
+                  <h4><a href="{{link}}" target="_blank">{{title}}</a></h4>
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                </div>
+                <p><button class="button expanded" data-open="cardModal{{_id}}">
+                  Add Note</button></p>
+              </div>
+          </div>
+          {{/if}}
+        {{/each}}
+            {{else}}
+            <div class="empty-container title-container animated">
+            <h1>No articles saved!</h1>
+            </div>
+      {{/if}}
+    </div>
+</div>

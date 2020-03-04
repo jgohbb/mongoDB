@@ -1,0 +1,141 @@
+body {
+  background-image: url('/images/Newspaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Special Elite', cursive;
+}
+.title-container {
+  margin: 0 auto;
+  max-width: 900px;
+  background-image: radial-gradient(#A3CEF1, rgb(215, 171, 120));
+  box-shadow: 20px 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.container-md {
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 20px 20px 20px;
+}
+.col-md-12 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+h1, h2, h5 {
+  text-align: center;
+  vertical-align: center;
+  margin: 20px 0 30px 0;
+  padding: 20px;
+  font-family: 'Special Elite', cursive;
+}
+#delete {
+  background-color: maroon;
+}
+
+/* article styles */
+#article-container {
+  background: radial-gradient(#A3CEF1, rgb(215, 171, 120));
+  border-radius: 10px;
+}
+#saved-article-container {
+  background: radial-gradient(#A3CEF1, rgb(215, 171, 120));
+  border-radius: 1px;
+}
+
+/* card styles */
+.card {
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+  margin: 20px 0 10px 0;
+  width: 90%;
+  text-align: center;
+}
+.card .button {
+  letter-spacing: .1em;
+}
+.card .button:hover {
+  letter-spacing: .5em;
+  /* color: red; */
+  transition: .1s;
+}
+
+/* topbar styles */
+.topbar-responsive {
+  background: #2c3840;
+  padding: 1rem 1.5rem;
+}
+.topbar-responsive .topbar-responsive-logo {
+  color: #fefefe;
+  vertical-align: middle;
+}
+.topbar-responsive .menu {
+  background: #2c3840;
+}
+.topbar-responsive .menu .button {
+  margin: 0 15px 0 0;
+}
+.topbar-responsive .menu li:last-of-type {
+  margin-right: 15px;
+}
+.topbar-responsive .menu a {
+  color: #fefefe;
+  transition: color 0.15s ease-in;
+}
+.topbar-responsive .menu a:hover {
+  color: yellow;
+}
+.topbar-responsive .menu .topbar-responsive-button {
+  color: #fefefe;
+  border-color: #fefefe;
+  border-radius: 5000px;
+  transition: color 0.15s ease-in, border-color 0.15s ease-in;
+}
+.topbar-responsive .menu .topbar-responsive-button:hover {
+  color: #c6d1d8;
+  border-color: #c6d1d8;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
